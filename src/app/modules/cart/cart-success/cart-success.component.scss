@@ -1,0 +1,61 @@
+@import '~src/styles/variables';
+
+:host {
+  height: 100%;
+}
+
+.cart-success {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 30px 30px 70px 30px;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    color: $yellow;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+
+    span:first-of-type {
+      font-size: 30px;
+    }
+
+    span:last-of-type {
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+  }
+
+  &-description {
+    margin-top: 30px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0.8;
+
+    button {
+      padding: 5px 10px;
+      color: $yellow;
+      background: transparent;
+      border: 1px solid $yellow;
+      transition: 0.3s;
+
+      i {
+        margin-left: 5px;
+      }
+
+      &:hover {
+        color: #4b4340;
+        background-color: $yellow;
+        transition: 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~src/styles/buttons';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
+* {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.close-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 1px);
+    height: 100%;
+    width: 2px;
+    background-color: #333;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
