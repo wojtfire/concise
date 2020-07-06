@@ -1,0 +1,127 @@
+@import '../../../../styles/bootstrap-core';
+
+:host {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 600;
+}
+
+.cart-item-wrapper {
+  padding: 0 20px 0 35px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  &-content {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 10px 0;
+    background-color: #E5E9EA;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px 0px rgb(185, 185, 185)
+  }
+
+  &-image div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    margin: 0 auto;
+
+    img {
+      max-height: 85px;
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+
+  &-description {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include media-breakpoint-between(sm, md) {
+        justify-content: flex-start;
+      }
+    }
+
+    .row {
+      width: 100%;
+    }
+
+    &-name {
+      flex-direction: column;
+      align-items: flex-start !important;
+
+      @include media-breakpoint-down(xs) {
+        align-items: center !important;
+      }
+
+      span:first-of-type {
+        display: flex;
+      }
+
+      span:last-of-type {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    &-quantity {
+      &.summary {
+        pointer-events: none;
+      }
+
+      span {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      input {
+        width: 50px;
+        padding: 0 3px;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        text-align: center;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.0001);
+          transition: 0.3s;
+        }
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+    }
+
+  }
+}
+
+.cart-item-delete-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

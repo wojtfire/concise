@@ -1,0 +1,49 @@
+@import '~src/styles/variables';
+
+.back-button {
+  cursor: pointer;
+
+  &:hover {
+    i {
+      transform: translateX(-2px);
+      transition: 0.3s;
+    }
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  i {
+    transition: 0.3s;
+  }
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+.pay-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: $yellow;
+  border: 0;
+  box-shadow: 0 1px 3px 0 rgba(75, 67, 64, 1);
+  color: #4b4340;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+  margin-top: auto;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    transition: 0.3s;
+  }
+}
